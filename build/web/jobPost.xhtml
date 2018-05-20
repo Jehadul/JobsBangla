@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<composition xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:form>
+        <p:panel>
+           
+            <h:panelGrid columns="2" columnClasses="lebelColumn, fieldColumn">
+                 <div class="form-group">
+    <label class="control-label col-sm-2" for="jt">Job Title:</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control" id="jt" placeholder="Enter job title" 
+               value="#{jobPostCtrl.jobpost.jobTitle}"/>
+    </div>
+               </div>
+                <p:outputLabel value="Job Requirement"/>
+                <p:inputText id="jr" value="#{jobPostCtrl.jobpost.jobRequ}" label="jr"/>
+                
+                <p:outputLabel value="No Of Post"/>
+                <p:inputText id="nof" value="#{jobPostCtrl.jobpost.noOfPost}" label="nof"/>
+                
+                 
+                </h:panelGrid>
+        </p:panel>
+
+        <p:panel>
+            
+         <p:growl id="growl" life="2000" />
+     
+         <p:commandButton value="Save" id="ajax" update="growl" action="#{jobPostCtrl.save}" ajax="false" styleClass="ui-priority-primary" />
+ 
+
+            
+        </p:panel>
+    </h:form>
+</composition>
+

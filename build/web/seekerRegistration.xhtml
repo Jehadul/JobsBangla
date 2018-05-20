@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<composition xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+             xmlns:p="http://primefaces.org/ui">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:form>
+        <p:panel>
+            
+            <h:panelGrid columns="2" columnClasses="lebelColumn, fieldColumn">
+                <p:outputLabel value="First Name"/>
+                <p:inputText id="fns" value="#{seekerRegiCtrl.jobseekerreg.jsFirstname}" label="fns" required="true"/>
+               
+                <p:outputLabel value="Last Name"/>
+                <p:inputText id="lns" value="#{seekerRegiCtrl.jobseekerreg.jsLastName}" label="lns"/>
+                
+                <p:outputLabel value="Father Name"/>
+                <p:inputText id="fn" value="#{seekerRegiCtrl.jobseekerreg.fathersName}" label="fn"/>
+                
+                <p:outputLabel value="Mother Name"/>
+                <p:inputText id="mn" value="#{seekerRegiCtrl.jobseekerreg.mothersName}" label="mn"/>
+               
+                <p:outputLabel value="Date of birth"/>
+                <p:inputText id="dob" value="#{seekerRegiCtrl.jobseekerreg.jsDob}" label="dob"/>
+                
+                <p:outputLabel value="Gender"/>
+                <p:inputText id="adr" value="#{seekerRegiCtrl.jobseekerreg.jsGender}" label="adr"/>
+                
+                <p:outputLabel value="Maritual Status"/>
+                <p:inputText id="gn" value="#{seekerRegiCtrl.jobseekerreg.maritalSt}" label="gn"/>
+                
+                <p:outputLabel value="Religion"/>
+                <p:inputText id="rl" value="#{seekerRegiCtrl.jobseekerreg.religion}" label="rl"/>
+                
+                <p:outputLabel value="Present Address"/>
+                <p:inputText id="pa" value="#{seekerRegiCtrl.jobseekerreg.presentAdrs}" label="pa"/>
+                
+                <p:outputLabel value="Permanent Address"/>
+                <p:inputText id="pad" value="#{seekerRegiCtrl.jobseekerreg.prmntAdrs}" label="pad"/>
+               
+                <p:outputLabel value="Email"/>
+                <p:inputText id="eml" value="#{seekerRegiCtrl.jobseekerreg.jsEmail}" label="eml"/>
+                
+                <p:outputLabel value="Contact No"/>
+                <p:inputText id="cn" value="#{seekerRegiCtrl.jobseekerreg.jsContactNo}" label="cn"/>
+                
+                <p:outputLabel value="Nationality"/>
+                <p:inputText id="nat" value="#{seekerRegiCtrl.jobseekerreg.jsNationality}" label="nat"/>
+                
+                <p:outputLabel value="Nationl Id"/>
+                <p:inputText id="ni" value="#{seekerRegiCtrl.jobseekerreg.jsNationId}" label="ni"/>
+                
+                
+                
+                <p:outputLabel value="User Name"/>
+                <p:inputText id="una" value="#{seekerRegiCtrl.jobseekerreg.jsUserName}" label="una"/>
+                
+                <p:outputLabel value="Password"/>
+                <p:inputText id="pasw" value="#{seekerRegiCtrl.jobseekerreg.jsPassword}" label="pasw"/>
+                            
+                
+                </h:panelGrid>
+        </p:panel>
+
+        <p:panel>
+           
+                
+                
+                <p:growl id="growl" life="2000" />
+     
+                <p:commandButton value="Save" id="ajax" update="growl" action="#{seekerRegiCtrl.save}" ajax="false" styleClass="ui-priority-primary" />
+ 
+
+            
+        </p:panel>
+    </h:form>
+</composition>
+
